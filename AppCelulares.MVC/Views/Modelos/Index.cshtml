@@ -21,6 +21,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.CelularId)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Año_Lanzamiento)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -34,8 +37,11 @@
                 @Html.DisplayFor(modelItem => item.Marca)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CelularId)
+                    @Html.DisplayFor(modelItem => item.CelularId)
             </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Año_Lanzamiento)
+                </td>
             <td>
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
                     <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
