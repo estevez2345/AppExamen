@@ -1,0 +1,40 @@
+﻿@model AppCelulares.Entidades.Modelo
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Modelo</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CelularId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CelularId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-group">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            <a asp-action="Index" class="btn btn-secondary ml-2">Back to List</a>
+        </div>
+    </form>
+</div>
